@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "clientApp": {
+    "stromy-client-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/clientApp",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "clientApp:build"
+            "browserTarget": "stromy-client-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "clientApp:build:production"
+              "browserTarget": "stromy-client-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "clientApp:build"
+            "browserTarget": "stromy-client-app:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "clientApp:serve"
+            "devServerTarget": "stromy-client-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "clientApp:serve:production"
+              "devServerTarget": "stromy-client-app:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "clientApp",
+  "defaultProject": "stromy-client-app",
   "cli": {
     "analytics": "9e01bc12-ee26-47f0-9038-ee1a34d60591"
   }
